@@ -51,7 +51,8 @@ if __name__=="__main__":
 
     if opt.experiment is None:
         opt.experiment = 'samples'
-    os.system('mkdir {0}'.format(opt.experiment))
+
+    os.makedirs(opt.experiment, exist_ok=True)
 
     opt.manualSeed = random.randint(1, 10000) # fix seed
     print("Random Seed: ", opt.manualSeed)
