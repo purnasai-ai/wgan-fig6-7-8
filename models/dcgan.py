@@ -189,7 +189,7 @@ class DCGAN_G_nobn(nn.Module):
                         nn.ConvTranspose2d(cngf, nc, 4, 2, 1, bias=False))
         main.add_module('final:{0}:tanh'.format(nc),
                         nn.Tanh())
-        self.main = main-
+        self.main = main
 
     def forward(self, input):
         if isinstance(input.data, torch.cuda.FloatTensor) and self.ngpu > 1:
